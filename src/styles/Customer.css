@@ -1,0 +1,65 @@
+.main-container {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-container img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    background-size:cover;
+    background-position:50%;
+
+    filter: brightness(50%);
+}
+
+.main-container label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: #FFFFFF;
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    src: url("../font/NanumGothic.ttf");
+  }
+.customer_title {
+    font-family: 'NanumGothic';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vh;
+    margin-bottom: 80px;
+}
+
+.scroll-box {
+    height: 80px;
+    border: 1px solid #d8d8d8;
+    font-size: 13px;
+    line-height: 18px;
+    background: #f7f7f7;
+    color: #666;
+    padding: 10px;
+    overflow: auto;
+}
+
+.index-list {
+    
+}
+
+.index-list img {
+    margin: 0px 5px 0px 0px;
+}
+
+.index-list img {
+    filter: invert(87%) sepia(0%) saturate(0%) hue-rotate(256deg) brightness(88%) contrast(90%);
+}
+
+textarea {
+    height: 100px;
+}

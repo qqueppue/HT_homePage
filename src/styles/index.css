@@ -1,0 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap'); */
+
+body {
+  margin: 0;
+  /* font-family: "YJ_Obang_TTF", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+* {
+  font-family: "NanumGothic";
+}
+
+@font-face {
+  font-family: "YJ_Obang_TTF";
+  src: url("../font/YJ_Obang_TTF.ttf");
+}
+/* @font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+} */
+@font-face {
+  font-family: 'LINESeedKR-Rg';
+  src: url("../font/LINESeedKR-Rg.ttf");
+}
+@font-face {
+  font-family: 'NanumGothic';
+  src: url("../font/NanumGothic.ttf");
+}
