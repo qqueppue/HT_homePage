@@ -56,9 +56,9 @@ function Customer() {
 
         } else {
             const inquiry_form = document.forms['inquiry_form'];
-            console.log(inquiry_form);
+            // console.log(inquiry_form);
             const test = inquiry_form.elements.name.value;
-            console.log(`test: ${test}`);
+            // console.log(`test: ${test}`);
             // inquiry_form.submit();
         }
     };
@@ -77,7 +77,7 @@ function Customer() {
                                 <Form.Label><img className='icon name_label' src={Icon.asterisk} /><label>성함</label></Form.Label>
                             </Col>
                             <Col sm={9} className="my-1">
-                                <Form.Control type="text" id='name' name='name' value={name} onChange={(evt) => { setName(evt.target.value); console.log(`setName: ${evt.target.value}`) }} onClick={handleInput} />
+                                <Form.Control type="text" id='name' name='name' value={name} onChange={(evt) => { setName(evt.target.value); }} onClick={handleInput} />
                             </Col>
                         </Row>
                     </Form.Group>

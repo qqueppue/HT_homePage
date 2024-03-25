@@ -12,7 +12,7 @@ function Header() {
 
     const handleToggle = () => {
         const header_control = document.querySelector('#header_control');
-        console.log(header_control);
+        // console.log(header_control);
     }
 
     // const clicked_input = document.querySelectorAll('.headerMenu');

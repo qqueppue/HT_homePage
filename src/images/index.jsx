@@ -8,6 +8,7 @@ export { default as mainImage3 } from './mainImage3.jpg';
 export { default as companyMain } from './companyMain.jpg';
 export { default as CompanyGreeting } from './CompanyGreeting.jpg';
 export { default as CompanyPicture } from './CompanyPicture.jpg';
+export { default as CompanyPicture2 } from './CompanyPicture2.jpg';
 export { default as ProductLine1_1 } from './ProductLine1-1.jpg';
 export { default as ProductLine1_2 } from './ProductLine1-2.jpg';
 export { default as ProductLine2 } from './ProductLine2.jpg';

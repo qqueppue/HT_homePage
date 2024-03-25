@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Col, Container, Nav, Row } from 'react-bootstrap';
-import { companyMain, CompanyGreeting, CompanyPicture, ProductLine1_1, ProductLine1_2, ProductLine2, ProductLine3, mapSampleImg } from '../../images';
+import { companyMain, CompanyGreeting, CompanyPicture, ProductLine1_1, ProductLine1_2, ProductLine2, ProductLine3, mapSampleImg, CompanyPicture2 } from '../../images';
 import '../../styles/Company.css';
 import * as Icon from '../../icons/index';
 
@@ -78,12 +78,12 @@ function Greetings() {
                 selectedTap = tapList[idx];
                 // console.log(`tapList: ${selectedTap} / idx: ${idx} / currHeight: ${currHeight}`);
                 var selecteId = document.getElementById(selectedTap);
-                console.log(selecteId)
+                // console.log(selecteId)
             }
         });
 
         const company_navbar = document.querySelector("#company_navbar");
-        console.log(company_navbar);
+        // console.log(company_navbar);
         if (company_navbar !== null) {
             const c_scrollY = window.scrollY;
             
@@ -147,7 +147,7 @@ function Greetings() {
                             </div>
                         </div>
                         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'auto' }}>
-                            <img src={CompanyPicture} style={{ height: '500px', width: 'auto'}}></img>
+                            <img src={CompanyPicture2} style={{ height: '800px', width: 'auto'}}></img>
                         </div>
                     </div>
                 </div>
