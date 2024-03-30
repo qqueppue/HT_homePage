@@ -32,35 +32,64 @@ function Customer() {
         if (name == "") {
             handleChangeIcon("name");
             alert("성함을 입력해주세요.");
-            return;
+            return false;
 
         } else if (email == "") {
             handleChangeIcon("email");
             alert("이메일 주소를 입력해주세요.");
-            return;
+            return false;
             
         } else if (title == "") {
             handleChangeIcon("title");
             alert("문의 제목을 입력해주세요.");
-            return;
+            return false;
 
         } else if (content == "") {
             handleChangeIcon("content");
             alert("문의 내용을 입력해주세요.");
-            return;
+            return false;
 
         } else if (checkpers == false) {
             handleChangeIcon("checkpers");
             alert("개인정보 처리방침에 동의해주세요.");
-            return;
+            return false;
 
         } else {
             const inquiry_form = document.forms['inquiry_form'];
-            // console.log(inquiry_form);
-            const test = inquiry_form.elements.name.value;
-            // console.log(`test: ${test}`);
+            inquiry_form.action = '/api/sendMail';
             // inquiry_form.submit();
+
+            var check_submit = window.confirm('제작 및 견적 문의를 접수하시겠습니까?');
+            return check_submit;
         }
+    };
+
+    const result_submit = (evt) => {
+        console.log("evt");
+        console.log(evt.target.results);
+
+        var iframe1 = document.querySelector("iframe").results;
+        console.log("iframe1");
+        console.log(iframe1);
+
+        var iframe2 = document.getElementsByTagName('iframe')[0].contentWindow.document.querySelector("pre");
+        if (iframe2 == true) {
+            console.log('1');
+        } else if (iframe2 == false) {
+            console.log('2');
+        } else if (iframe2 == 'true') {
+            console.log('3');
+        } else if (iframe2 == 'false') {
+            console.log('4');
+        } else {
+            console.log('5');
+        }
+        console.log("iframe2");
+        console.log(iframe2);
+        
+        var temp1 = evt.target.contentDocument.body;
+        console.log('temp1');
+        console.log(temp1);
     };
 
     return(
@@ -69,7 +98,7 @@ function Customer() {
                 <img src={CusomerMain}></img><label>고객센터</label>
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', background: 'white' }}>
-                <Form name="inquiry_form" style={{ margin: '10vw', width: '1000px' }}>
+                <Form name="inquiry_form" method='post' target='blankifm' onSubmit={checkFomr} style={{ margin: '10vw', width: '1000px' }}>
                     <Row><label className='customer_title'>제작 및 견적 문의</label></Row>
                     <Form.Group className="mb-3">
                         <Row className="align-items-center">
@@ -135,12 +164,14 @@ function Customer() {
                     </Form.Group>
 
                     <Col className="my-1" style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Button variant="primary" onClick={checkFomr}>
+                        {/* <Button variant="primary" onClick={checkFomr}> */}
+                        <Button variant="primary" type='submit'>
                             접수
                         </Button>
                     </Col>
                 </Form>
             </div>
+            <iframe name='blankifm' style={{ display: 'none' }} onLoad={(evt) => { result_submit(evt); }}></iframe>
         </div>
     );
 }

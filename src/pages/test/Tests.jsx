@@ -3,6 +3,7 @@ import { Col, Container, Nav, Row } from 'react-bootstrap';
 import { companyMain, CompanyGreeting, CompanyPicture, ProductLine1_1, ProductLine1_2, ProductLine2, ProductLine3, mapSampleImg } from '../../images';
 import '../../styles/Company.css';
 import * as Icon from '../../icons/index';
+import axios from 'axios';
 
 const { kakao } = window;
 
@@ -11,6 +12,19 @@ const tapHeight = [0];
 
 function Tests() {
     useEffect(() => {
+
+        axios.post('/api/test', {
+            mon: "nodetest"
+        },
+        { "Content-Type": "application/json", withCredentials: true },)
+        .then((response) => {
+            console.log('response');
+            console.log(response.data.test);
+        })
+        .catch((err) => {
+            console.log('err');
+            console.log(err);
+        });
         // window.scrollTo(0, 0);
         // window.location.href = '/company#';
 
